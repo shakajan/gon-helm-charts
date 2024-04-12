@@ -35,14 +35,11 @@ serviceAccount:
   create: false
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 
 ingress:
   enabled: true
-  className: "nginx"
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
     - paths:
         - path: /test
