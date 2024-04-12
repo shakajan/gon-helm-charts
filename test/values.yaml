@@ -39,6 +39,7 @@ service:
   port: 80
 
 ingress:
+  className: "nginx"
   enabled: true
   hosts:
     - paths:
