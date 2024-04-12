@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2024-04-12T14:20:10.046548+09:00"
+entries:
+  news-producer:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-04-12T14:31:25.931815+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 2a6a935fe4b8a44a61b08ee77ff714df97220aaac337858734370f36c049372f
+    name: news-producer
+    type: application
+    urls:
+    - news-producer-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-12T14:31:25.930533+09:00"
