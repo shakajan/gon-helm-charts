@@ -28,6 +28,10 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+
 service:
   type: ClusterIP
   port: 8000
