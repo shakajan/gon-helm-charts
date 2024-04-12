@@ -36,7 +36,7 @@ serviceAccount:
 
 service:
   type: NodePort
-  port: 80
+  port: 8080
 
 ingress:
   className: "nginx"
