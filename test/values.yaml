@@ -14,6 +14,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "test"
 
+namespace: "test"
+
 podAnnotations: {}
 podLabels: {}
 
@@ -62,11 +64,14 @@ livenessProbe:
   httpGet:
     path: /
     port: http
+  initialDelaySeconds: 10
+  timeoutSeconds: 5
 readinessProbe:
   httpGet:
     path: /
     port: http
-
+  initialDelaySeconds: 10
+  timeoutSeconds: 5
 autoscaling:
   enabled: false
   minReplicas: 1
