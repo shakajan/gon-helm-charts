@@ -16,9 +16,16 @@ spec:
         app: kafka
     spec:
       initContainers:
-        - name: wait-for-kafka-init
-          image: busybox
-          command: ['sh', '-c', 'sleep 60']
+      - name: wait-for-zookeeper
+        image: busybox
+        command:
+          - sh
+          - -c
+          - |
+            until nc -z -v -w30 zookeeper 2181; do
+              echo "Waiting for Zookeeper to start..."
+              sleep 5
+            done
       containers:
         - name: kafka
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
