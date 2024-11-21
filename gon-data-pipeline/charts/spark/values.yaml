@@ -319,15 +319,13 @@ master:
   resourcesPreset: "small"
   ## @param master.resources Set container requests and limits for different resources like CPU or memory (essential for production workloads)
   ## Example:
-  ## resources:
-  ##   requests:
-  ##     cpu: 2
-  ##     memory: 512Mi
-  ##   limits:
-  ##     cpu: 3
-  ##     memory: 1024Mi
-  ##
-  resources: {}
+  resources:
+    requests:
+      cpu: 1
+      memory: 2048Mi
+    limits:
+      cpu: 1
+      memory: 2048Mi
   ## Configure extra options for liveness probe
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
   ## @param master.livenessProbe.enabled Enable livenessProbe
@@ -688,10 +686,10 @@ worker:
   resources:
     requests:
       cpu: 1
-      memory: 1Gi
+      memory: 2Gi
   limits:
       cpu: 1
-      memory: 1Gi
+      memory: 2Gi
   ##
   ## Configure extra options for liveness probe
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
